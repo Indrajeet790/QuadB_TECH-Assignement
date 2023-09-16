@@ -9,9 +9,6 @@
 - [Database Documentation](#database-documentation)
   - [Users Table Structure](#users-table-structure)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 
 ## API Documentation
@@ -61,14 +58,4 @@ Describe the structure of your database here.
 4. Start the server: `npm start`
 5. The API will be available at `http://localhost:7000`.
 
-## Usage
 
-Explain how to use your project and the available APIs.
-
-## Contributing
-
-Explain how others can contribute to your project if applicable.
-
-## License
-
-This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
