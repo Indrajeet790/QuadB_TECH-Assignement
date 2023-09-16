@@ -6,8 +6,6 @@
 - [Description](#description)
 - [API Documentation](#api-documentation)
   - [Endpoints](#endpoints)
-- [Database Documentation](#database-documentation)
-  - [Users Table Structure](#users-table-structure)
 - [Installation](#installation)
 
 
