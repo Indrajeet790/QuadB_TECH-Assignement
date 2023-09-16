@@ -16,6 +16,8 @@ This section provides documentation for the APIs used in your project.
 
 List and describe the available API endpoints here.
 
+### `/signin` - post request
+- POST `/users/signin` - Authenticate the user and the user can update user details.
 #### `/details` - GET Request
 - GET `/users/details/:id` - Get the user's details from the database by ID.
 #### `/update` - PUT Request
