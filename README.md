@@ -10,7 +10,7 @@
 
 ## API Documentation
 
-Published postman documentation of 
+Published postman documentation of https://documenter.getpostman.com/view/25896599/2s9YC7SBgL
 
 ### Endpoints
 
