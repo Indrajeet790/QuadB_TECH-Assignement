@@ -1,19 +1,41 @@
 const db = require("../config/mySqlConnection")
 const User = db.users
-
-// module.exports.renderForm=async(req,res)=>{
-//     return res.render("userForm.ejs");
-// }
-module.exports.createUser = async (req, res) => {
+ 
+//rendering the form
+module.exports.renderForm= (req, res) => {
     try {
-        const newUser = await User.create(req.body)
-        return res.json(newUser)
-    } catch (err) {
-        console.log("error", err);
-
+        return res.render("userForm.ejs");
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({ Error: error.message });
     }
+  };
+ 
+// createFunction user
+module.exports.createUser =  async (req, res) => {
+    console.log(req.body);
+    try {
+        const { user_name, user_email, user_password, total_orders } = req.body;
+        const user_image = req.file.filename;
 
-}
+        const newUser = await User.create({
+            user_name,
+            user_email,
+            user_password,
+            user_image,
+            total_orders,
+        });
+
+        res.status(201).json(newUser);
+    } catch (error) {
+        if (error.name === 'SequelizeUniqueConstraintError') {
+            return res.status(422).json({ message: 'User already exists' });
+          } else {
+            console.error(error);
+            return res.status(500).json({ error: error.message });
+          }
+    }
+};
 // getDetails by specific id
 module.exports.getUserDetail = async (req, res) => {
     try {
@@ -32,6 +54,7 @@ module.exports.getUserDetail = async (req, res) => {
         return res.status(500).json({ message: err })
     }
 }
+// get user Image
 module.exports.getUserImage = async (req, res) => {
     try {
         const userId = req.params.id; 

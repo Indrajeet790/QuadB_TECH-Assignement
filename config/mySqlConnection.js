@@ -1,4 +1,5 @@
-const Sequelize = require("sequelize");
+const {Sequelize,DataTypes }= require("sequelize");
+
 
 const sequelize = new Sequelize('quadb', 'root', process.env.DB_PASSWORD, {
     host: 'localhost',
@@ -19,7 +20,14 @@ sequelize.authenticate()
 
 const db ={};
 
+
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
+db.users=require("../models/user")(sequelize, DataTypes, Sequelize)
+//syncing the db
+db.sequelize.sync({force: false}) 
+.then(() => {
+    console.log('yes re-sync done!');
+});
 module.exports = db;
