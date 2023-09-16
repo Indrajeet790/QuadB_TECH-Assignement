@@ -6,7 +6,11 @@ const multer=require("../config/multer")
 
 
 router.get("/",userController.renderForm)
+
 router.post("/insert",  multer.single('user_image'),userController.createUser)
+router.post("/signin", userController.SignIn)
+
+
 router.get("/details/:id",userController.getUserDetail)
 router.get("/image/:id",userController.getUserImage)
 router.put("/update/:user_id", multer.single('user_image'),userController.updateUserDetail)

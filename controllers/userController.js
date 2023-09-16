@@ -1,5 +1,7 @@
 const db = require("../config/mySqlConnection")
 const User = db.users
+const jwt = require("jsonwebtoken");
+
  
 //rendering the form
 module.exports.renderForm= (req, res) => {
@@ -35,6 +37,28 @@ module.exports.createUser =  async (req, res) => {
             return res.status(500).json({ error: error.message });
           }
     }
+};
+
+module.exports.SignIn = async (req, res) => {
+  try {
+      const {user_email, user_password} = req.body
+    const user = await User.findOne({where: {user_email}});
+    // check password
+    if (!user || user.user_password !== user_password) {
+      return res.status(422).json({ message: "Invalid username/password" });
+    }
+    const token = jwt.sign(user.toJSON(), "mySecret", { expiresIn: "1d" });
+
+    return res.status(200).json({
+      message: "Sign in successful. Here is your token. Please keep it safe!",
+      data: {
+        token: token,
+      },
+    });
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
 };
 
 
