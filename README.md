@@ -3,7 +3,6 @@
 
 ## Table of Contents
 
-- [Description](#description)
 - [API Documentation](#api-documentation)
   - [Endpoints](#endpoints)
 - [Installation](#installation)
