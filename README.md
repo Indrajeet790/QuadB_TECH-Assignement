@@ -22,7 +22,7 @@ List and describe the available API endpoints here.
 - PUT `/users/update/:user_id` - Update an existing user by its id.
 
 #### `/image` - GET Request
-- GET `/users/image/:user_id` - Retrieve a specific image by its user id.
+- GET `/users/image/:id` - Retrieve a specific image by its user id.
 #### `/insert` - POST Request
 - GET `/users/insert` - Create User data and store in the database.
 
