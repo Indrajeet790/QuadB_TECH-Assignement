@@ -35,7 +35,7 @@ List and describe the available API endpoints here.
 
 
 ## Installation
-1. Ensure you have Node.js, Nodemon, Express, Sequelize, and mySQL workbench installed on your system.
+1. Ensure you have Node.js, Nodemon, Express, JSONwebtoken, Sequelize, and mySQL workbench installed on your system.
 2. Clone the repository: `https://github.com/Indrajeet790/QuadB_TECH-Assignement`
 3. Install the dependencies: `npm install`
 4. Start the server: `npm start`
