@@ -1,6 +1,5 @@
 # QuadB_TECH-Assignement
 
-Briefly describe your project here.
 
 ## Table of Contents
 
@@ -9,15 +8,11 @@ Briefly describe your project here.
   - [Endpoints](#endpoints)
 - [Database Documentation](#database-documentation)
   - [Users Table Structure](#users-table-structure)
-- [Implementation Notes](#implementation-notes)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Description
-
-Provide a more detailed description of your project here. Explain its purpose, features, and any other relevant information.
 
 ## API Documentation
 
@@ -52,17 +47,14 @@ Describe the structure of your database here.
 - `created_at`: Timestamp when the user was created.
 - `last_logged_in`: Timestamp when the user last logged in.
 
-## Implementation Notes
 
-Provide implementation details and recommendations here.
-
-- Use Sequelize to write queries for database interactions.
-- Implement authentication middleware for specific APIs as mentioned in the API documentation.
-- Include a SQL file in your project's directory containing a complete data and structure dump of your database.
 
 ## Installation
-
-Provide installation instructions for your project here.
+1. Make sure you have Node.js, Express, and installed on your system.
+2. Clone the repository: `git clone https://github.com/Indrajeet790/BokkStore-assignment
+3. Install the dependencies: `npm install`
+4. Start the server: `node index.js`
+5. The API will be available at `http://localhost:8000`.
 
 ## Usage
 
