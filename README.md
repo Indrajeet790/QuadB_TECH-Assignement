@@ -10,7 +10,7 @@
 
 ## API Documentation
 
-This section provides documentation for the APIs used in your project.
+Published postman documentation of 
 
 ### Endpoints
 
