@@ -34,6 +34,7 @@ List and describe the available API endpoints here.
 
 ### `/delete` - DELETE Request
 - DELETE `/users/delete/:id` - Delete an item by its ID.
+  
 ...
 
 ### Database Documentation
