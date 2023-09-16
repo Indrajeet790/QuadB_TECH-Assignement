@@ -1,12 +1,21 @@
+/* Reset some default styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 0.5s ease;
 }
 
 /* Form container styles */
@@ -16,6 +25,8 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
+    animation: slideIn 0.5s ease;
+    margin: 20px; /* Add margin for spacing around the form */
 }
 
 /* Input field styles */
@@ -25,10 +36,12 @@ input[type="password"],
 input[type="file"] {
     width: 100%;
     padding: 10px;
-    margin: 5px 0;
+    margin: 10px 0; /* Add margin for spacing between input fields */
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    transition: border-color 0.3s ease;
+    display: block;
 }
 
 /* Submit button styles */
@@ -41,9 +54,32 @@ input[type="submit"] {
     cursor: pointer;
     font-size: 16px;
     width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add margin for spacing below the submit button */
 }
 
 /* Submit button hover effect */
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

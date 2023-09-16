@@ -36,6 +36,8 @@ module.exports.createUser =  async (req, res) => {
           }
     }
 };
+
+
 // getDetails by specific id
 module.exports.getUserDetail = async (req, res) => {
     try {
