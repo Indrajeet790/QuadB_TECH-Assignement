@@ -44,7 +44,8 @@ module.exports.getUserDetail = async (req, res) => {
         const user = await User.findByPk(userId, {
             attributes: { exclude: ["user_password"] }
 
-        });
+        }
+        );
         if (!user) {
             return res.status(404).json({ message: "user not found" });
         }
@@ -74,35 +75,35 @@ module.exports.getUserImage = async (req, res) => {
 }
 
 
-// update user details
+
 module.exports.updateUserDetail = async (req, res) => {
-  try {
-    const { user_id } = req.params;
-    const newDetails = req.body;
+    console.log(req.file.filename);
+    try {
+      const { user_id } = req.params;
+      const newDetails = req.body;
+      const user_image = req.file.filename;
+      const user = await User.findByPk(user_id,{
+        attributes: { exclude: ["user_password"] }
 
-    
-    const user = await User.findByPk(user_id);
-
-    if (!user) {
-      return res.status(404).json({ message: 'User not found' });
+    });
+  
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+  
+      // update userDetails
+      await User.update(newDetails, {where: { user_id }});
+      const updatedUser = await User.findByPk(user_id);
+  
+      return res.status(200).json({
+        message: 'User details updated successfully',
+        user: updatedUser,
+      });
+    } catch (error) {
+      console.error('Error:', error);
+      return res.status(500).json({ message: 'Internal server error' });
     }
-
-    // update userDetails
-    await User.update(newDetails, {
-      where: { user_id },
-    });
-
-    const updatedUser = await User.findByPk(user_id);
-
-    return res.status(200).json({
-      message: 'User details updated successfully',
-      user: updatedUser,
-    });
-  } catch (error) {
-    console.error('Error:', error);
-    return res.status(500).json({ message: 'Internal server error' });
-  }
-};
+  };
 
 // delete userDetails
 module.exports.deleteUserDetail = async (req, res) => {
