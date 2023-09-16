@@ -50,11 +50,11 @@ Describe the structure of your database here.
 
 
 ## Installation
-1. Make sure you have Node.js, Express, and installed on your system.
+1. Ensure you have Node.js, Nodemon, Express, Sequelize, and mySQL workbench installed on your system.
 2. Clone the repository: `git clone https://github.com/Indrajeet790/BokkStore-assignment
 3. Install the dependencies: `npm install`
-4. Start the server: `node index.js`
-5. The API will be available at `http://localhost:8000`.
+4. Start the server: `npm start
+5. The API will be available at `http://localhost:7000`.
 
 ## Usage
 
