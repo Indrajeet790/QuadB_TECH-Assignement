@@ -51,9 +51,9 @@ Describe the structure of your database here.
 
 ## Installation
 1. Ensure you have Node.js, Nodemon, Express, Sequelize, and mySQL workbench installed on your system.
-2. Clone the repository: `git clone https://github.com/Indrajeet790/BokkStore-assignment
+2. Clone the repository: `https://github.com/Indrajeet790/QuadB_TECH-Assignement`
 3. Install the dependencies: `npm install`
-4. Start the server: `npm start
+4. Start the server: `npm start`
 5. The API will be available at `http://localhost:7000`.
 
 ## Usage
