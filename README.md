@@ -23,13 +23,17 @@ This section provides documentation for the APIs used in your project.
 List and describe the available API endpoints here.
 
 #### `/details` - GET Request
+- GET `/users/details/:id` - Get the user's details from the database by ID.
+#### `/update` - PUT Request
+- PUT `/users/update/:user_id` - Update an existing user by its id.
 
-This endpoint is used to fetch details of a specific user by providing the `user_id` as a query parameter.
+#### `/image` - GET Request
+- GET `/users/image/:id` - Retrieve a specific image by its user id.
+#### `/insert` - POST Request
+- GET `/users/insert` - Create User data and store in the database.
 
-**Structure:** `BASE_URL/details/${user_id}`
-
-**Returns:** An object containing user details.
-
+### `/delete` - DELETE Request
+- DELETE `/users/delete/:id` - Delete an item by its ID.
 ...
 
 ### Database Documentation
