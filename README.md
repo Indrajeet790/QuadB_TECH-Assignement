@@ -34,22 +34,6 @@ List and describe the available API endpoints here.
   
 ...
 
-### Database Documentation
-
-Describe the structure of your database here.
-
-#### Users Table Structure
-
-- `user_id`: A randomly generated UUIDV4.
-- `user_name`: The username of a user (may not be unique).
-- `user_email`: The user's email address (unique).
-- `user_password`: The user's password.
-- `user_image`: The user's image.
-- `total_orders`: Total orders placed by the user.
-- `created_at`: Timestamp when the user was created.
-- `last_logged_in`: Timestamp when the user last logged in.
-
-
 
 ## Installation
 1. Ensure you have Node.js, Nodemon, Express, Sequelize, and mySQL workbench installed on your system.
